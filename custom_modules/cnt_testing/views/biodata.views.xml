@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="cnt_testing_biodata_form" model="ir.ui.view">
+            <field name="name">cnt_testing.biodata.form</field>
+            <field name="model">cnt_testing.biodata</field>
+            <field name="arch" type="xml">
+                <form string="Biodata">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Nama"/>
+                            <field name="fullname" string="Nama Lengkap"/>
+                            <field name="tanggal_lahir" string="Tanggal Lahir"/>
+                            <field name="umur" string="Umur"/>
+                            <field name="anak" string="Anak"/>
+                            <field name="foto" widget="image" string="Foto"/>
+                            <field name="jenis_kelamin" string="Jenis Kelamin"/>
+                        </group>
+                        <group string="Pendidikan">
+                            <field name="sd" string="SD"/>
+                            <field name="smp" string="SMP"/>
+                            <field name="sma" string="SMA"/>
+                            <field name="sltp" string="SLTP"/>
+                            <field name="smk" string="SMK"/>
+                            <field name="smu" string="SMU"/>
+                            <field name="kuliah" string="KULIAH"/>
+                            <field name="slta" string="SLTA"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="cnt_testing_biodata_tree" model="ir.ui.view">
+            <field name="name">cnt_testing.biodata.tree</field>
+            <field name="model">cnt_testing.biodata</field>
+            <field name="arch" type="xml">
+                <tree string="Biodata">
+                    <field name="name" string="Nama" optional="show"/>
+                    <field name="fullname" string="Nama Lengkap" optional="show"/>
+                    <field name="tanggal_lahir" string="Tanggal Lahir" optional="show"/>
+                    <field name="umur" string="Umur" optional="show"/>
+                    <field name="anak" string="Anak" optional="show"/>
+                    <field name="jenis_kelamin" string="Jenis Kelamin" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cnt_testing_biodata_action" model="ir.actions.act_window">
+            <field name="name">Biodata</field>
+            <field name="res_model">cnt_testing.biodata</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
