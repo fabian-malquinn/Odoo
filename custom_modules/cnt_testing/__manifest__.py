@@ -1,5 +1,5 @@
 {
-    'name': 'CNT Testing',
+    'name': 'Biodata',
     'version': '0.1',
     'data': [
         'security/ir.model.access.csv',
