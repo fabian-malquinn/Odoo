@@ -1,5 +1,12 @@
 from odoo import models, fields
 
+class Pendidikan(models.Model):
+    _name = 'cnt_testing.pendidikan'
+    _description = 'Model untuk data pendidikan'
+
+    name = fields.Char(string='Nama', required=True)
+    deskripsi = fields.Text(string='Deskripsi')
+
 class Biodata(models.Model):
     _name = "cnt_testing.biodata"
 
@@ -12,14 +19,8 @@ class Biodata(models.Model):
     jenis_kelamin = fields.Selection([
         ('laki-laki', 'Laki-laki'),
         ('perempuan', 'Perempuan'),
-        ('other', 'Other'),
     ], string='Jenis_Kelamin')
-    sd = fields.Boolean(string='SD')
-    smp = fields.Boolean(string='SMP')
-    sma = fields.Boolean(string='SMA')
-    sltp = fields.Boolean(string='SLTP')
-    smk = fields.Boolean(string='SMK')
-    smu = fields.Boolean(string='SMU')
-    slta = fields.Boolean(string='SLTA')
-    kuliah = fields.Boolean(string='KULIAH')
+
+    pendidikan_ids = fields.Many2many('cnt_testing.pendidikan', string='Pendidikan')
+
     

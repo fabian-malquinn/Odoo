@@ -4,5 +4,6 @@
     <data>
         <menuitem id="biodata_root" name="Biodata" sequence="1"/>
         <menuitem id="biodata_menu" name="Biodata" action="cnt_testing_biodata_action" sequence="1" parent="biodata_root"/>
+        <menuitem id="menu_pendidikan" name="Pendidikan" action="cnt_testing_pendidikan_action" sequence="2" parent="biodata_root"/>
     </data>
 </odoo>

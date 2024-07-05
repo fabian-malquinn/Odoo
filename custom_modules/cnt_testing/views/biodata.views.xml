@@ -16,16 +16,7 @@
                             <field name="anak" string="Anak"/>
                             <field name="foto" widget="image" string="Foto"/>
                             <field name="jenis_kelamin" string="Jenis Kelamin"/>
-                        </group>
-                        <group string="Pendidikan">
-                            <field name="sd" string="SD"/>
-                            <field name="smp" string="SMP"/>
-                            <field name="sma" string="SMA"/>
-                            <field name="sltp" string="SLTP"/>
-                            <field name="smk" string="SMK"/>
-                            <field name="smu" string="SMU"/>
-                            <field name="kuliah" string="KULIAH"/>
-                            <field name="slta" string="SLTA"/>
+                            <field name="pendidikan_ids" widget="many2many_checkboxes" string="Pendidikan"/>
                         </group>
                     </sheet>
                 </form>
@@ -43,6 +34,7 @@
                     <field name="umur" string="Umur" optional="show"/>
                     <field name="anak" string="Anak" optional="show"/>
                     <field name="jenis_kelamin" string="Jenis Kelamin" optional="show"/>
+                    <field name="pendidikan_ids" string="Pendidikan" widget="many2many_checkboxes"/>
                 </tree>
             </field>
         </record>
@@ -50,6 +42,39 @@
         <record id="cnt_testing_biodata_action" model="ir.actions.act_window">
             <field name="name">Biodata</field>
             <field name="res_model">cnt_testing.biodata</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        
+        <record id="cnt_testing_pendidikan_form" model="ir.ui.view">
+            <field name="name">cnt_testing.pendidikan.form</field>
+            <field name="model">cnt_testing.pendidikan</field>
+            <field name="arch" type="xml">
+                <form string="Pendidikan">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Nama"/>
+                            <field name="deskripsi" string="Deskripsi"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="cnt_testing_pendidikan_tree" model="ir.ui.view">
+            <field name="name">cnt_testing.pendidikan.tree</field>
+            <field name="model">cnt_testing.pendidikan</field>
+            <field name="arch" type="xml">
+                <tree string="Pendidikan">
+                    <field name="name" string="Nama" optional="show"/>
+                    <field name="deskripsi" string="Deskripsi" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="cnt_testing_pendidikan_action" model="ir.actions.act_window">
+            <field name="name">Pendidikan</field>
+            <field name="res_model">cnt_testing.pendidikan</field>
             <field name="view_mode">tree,form</field>
         </record>
     </data>

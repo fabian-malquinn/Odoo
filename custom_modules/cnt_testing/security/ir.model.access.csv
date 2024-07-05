@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 cnt_testing.access_cnt_testing_biodata,access_cnt_testing_biodata,cnt_testing.model_cnt_testing_biodata,base.group_user,1,1,1,1
+cnt_testing.access_cnt_testing_pendidikan,access_cnt_testing_pendidikan,cnt_testing.model_cnt_testing_pendidikan,base.group_user,1,1,1,1
