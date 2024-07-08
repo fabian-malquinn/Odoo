@@ -4,6 +4,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/biodata.views.xml',
+        'views/pendidikan.views.xml',
         'views/menuitems.views.xml',
         
     ],

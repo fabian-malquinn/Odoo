@@ -44,38 +44,5 @@
             <field name="res_model">cnt_testing.biodata</field>
             <field name="view_mode">tree,form</field>
         </record>
-
-        
-        <record id="cnt_testing_pendidikan_form" model="ir.ui.view">
-            <field name="name">cnt_testing.pendidikan.form</field>
-            <field name="model">cnt_testing.pendidikan</field>
-            <field name="arch" type="xml">
-                <form string="Pendidikan">
-                    <sheet>
-                        <group>
-                            <field name="name" string="Nama"/>
-                            <field name="deskripsi" string="Deskripsi"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-
-        <record id="cnt_testing_pendidikan_tree" model="ir.ui.view">
-            <field name="name">cnt_testing.pendidikan.tree</field>
-            <field name="model">cnt_testing.pendidikan</field>
-            <field name="arch" type="xml">
-                <tree string="Pendidikan">
-                    <field name="name" string="Nama" optional="show"/>
-                    <field name="deskripsi" string="Deskripsi" optional="show"/>
-                </tree>
-            </field>
-        </record>
-
-        <record id="cnt_testing_pendidikan_action" model="ir.actions.act_window">
-            <field name="name">Pendidikan</field>
-            <field name="res_model">cnt_testing.pendidikan</field>
-            <field name="view_mode">tree,form</field>
-        </record>
     </data>
 </odoo>
